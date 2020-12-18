@@ -1,4 +1,5 @@
 // ВАРИАНТ №1
+
 const itemsRef = [...document.querySelectorAll('li.item')];
 console.log(`в списке ${itemsRef.length} категории`);
 
