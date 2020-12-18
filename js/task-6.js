@@ -1,5 +1,6 @@
 const inputRef = document.querySelector('#validation-input');
 const attrRef = document.querySelector('[data-length]');
+inputRef.setAttribute('autocomplete', 'off');
 
 const attrLength = Number(attrRef.dataset.length);
 
