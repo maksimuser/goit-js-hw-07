@@ -19,11 +19,12 @@ const images = [
 const rootGallery = document.querySelector('#gallery');
 
 const imgList = images.map(img => {
-  rootGallery.insertAdjacentHTML(
-    'afterbegin',
-    `<li><img src = ${img.url} alt = ${img.alt} width = 380/></li>`,
-    rootGallery.classList.add('list'),
-  );
-});
+  return `<li><img src='${img.url}' alt='${img.alt}' /></li>`;
+   }).join('');
+
+rootGallery.insertAdjacentHTML('afterbegin', imgList)
+ 
+rootGallery.classList.add('list'),
 
 console.log(rootGallery);
+

@@ -1,6 +1,13 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .list {
   display: flex;
   flex-direction: column-reverse;
+
+  list-style: none;
 }
 
 #validation-input {

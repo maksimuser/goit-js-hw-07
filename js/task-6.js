@@ -4,6 +4,22 @@ inputRef.setAttribute('autocomplete', 'off');
 
 const attrLength = Number(attrRef.dataset.length);
 
+inputRef.addEventListener('blur', handleInputBlur);
+
+function handleInputBlur(event) {
+  const length = (inputRef.textContent = event.target.value.length);
+  if (length === attrLength) {
+    inputRef.classList.remove('invalid');
+    inputRef.classList.add('valid')
+  } else {
+    inputRef.classList.remove('valid');
+    inputRef.classList.add('invalid')
+  }
+}
+
+
+
+/*
 inputRef.addEventListener('focus', handleInputFocus);
 inputRef.addEventListener('blur', handleInputBlur);
 
@@ -17,5 +33,6 @@ function handleInputBlur() {
     inputRef.classList.add('invalid');
   } else if (length === attrLength) {
     inputRef.classList.add('valid');
-  }
+  } 
 }
+*/
